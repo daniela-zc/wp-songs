@@ -33,27 +33,22 @@
 		<header id="site-header" class="header-footer-group" role="banner">
 
 			<div class="header-inner section-inner">
+
 				<div class="header-titles-wrapper">
+
 					<div class="header-titles">
 
 						<?php
-							// Site title or logo.
-							twentytwenty_site_logo();
-
-							// Site description.
-							twentytwenty_site_description();
+							// Site logo.
+							// twentytwenty_site_logo();
+							minimalsongs_site_logo();
+							// Get Site name.
+							// $description = get_bloginfo( 'name' );
 						?>
+						
+						<div class="minimal-site-description"><?php //echo $description?></div>
 
 					</div><!-- .header-titles -->
-
-					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-						<span class="toggle-inner">
-							<span class="toggle-icon">
-								<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
-							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
-						</span>
-					</button><!-- .nav-toggle -->
 
 				</div><!-- .header-titles-wrapper -->
 
