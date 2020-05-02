@@ -38,9 +38,30 @@ query_posts($args);
 
 <div class="contentarea">
     <div id="content" class="content_right ">    
-		<div class="row center-xs">
-			<div class="col-xs-8">
-				<div class="box">
+		<div class ='small-display'>
+			<div class="row center-xs">
+				<div class="col-xs-10">
+					<div class="songs-wrapper">
+						<?php if ( have_posts() ) { 
+							$i = 0; ?>
+							<table class='songs-result '>
+								<?php while ( have_posts() ) {
+									$i++;
+									$class = $i % 2 == 0 ? 'even' : 'odd';
+									the_post();
+									set_query_var( 'class', $class );
+									get_template_part( 'template-parts/song-preview');
+								} ?>
+							</table>
+						<?php } ?>
+					</div> <!-- .songs-wrapper -->
+				</div> <!-- .col-xs-10 -->
+			</div> <!-- .row -->
+		</div>	<!-- .small-display -->
+
+		<div class ='mid-display'>
+			<div class="row center-xs">
+				<div class="col-xs-6">
 					<div class="songs-wrapper">
 						<?php if ( have_posts() ) { 
 							$i = 0; ?>
@@ -54,12 +75,12 @@ query_posts($args);
 								} ?>
 							</table>
 						<?php } ?>
-					</div>
-				</div>
-			</div>
-		</div>
+					</div> <!-- .songs-wrapper -->
+				</div> <!-- .col-xs-6 -->
+			</div> <!-- .row -->
+		</div>	<!-- .mid-display -->
+		
   			
-		<!-- </div>	   -->
 		
 		
     </div><!-- content -->    

@@ -1,8 +1,11 @@
 <tr id="post-<?php the_ID();?>" class="<?php echo $class ?> " >
     <td class='td-play-wrap'> 
-        <a href="<?php the_permalink(); ?>"> 
-            <?php minimalsongs_play_png()?>
-        </a>
+        <div class ='display'>
+            <a href="<?php the_permalink(); ?>"> 
+                <?php minimalsongs_play_mid_png()?>
+            </a>
+        </div>
+        
     </td>
     
     <td class='td-song-wrap'>
@@ -11,18 +14,24 @@
     </td>
 
     <td class='td-choose-wrap'>
-        <div class="row end-xs">
-            <div class="choose-wrap col-xs-10">
+        <div class="row ">
+            <div class="choose-wrap end-xs">
                 <div class='choose-box box'>
-                    <div class='choose-box-item box'>
-                        <input type="radio" id="today-<?php the_ID();?>" name="choose" value="today">
-                        <label for="today-<?php the_ID();?>">Today</label>
-                    </div>
-                    <div class='choose-box-item box'>
-                        <input type="radio" id="friday-<?php the_ID();?>" name="choose" value="friday">
-                        <label for="friday-<?php the_ID();?>">Friday</label>
-                    </div>
+                    
+                <div class='choose-box-item toggle left'>
+                    <label>
+                        <input type="radio" id="today-<?php the_ID();?>" name="choose-<?php the_ID();?>">
+                        <span>Today</span>
+                    </label>
                 </div>
+                <div class='choose-box-item toggle right'>
+                    <label>
+                        <input type="radio" id="friday-<?php the_ID();?>" name="choose-<?php the_ID();?>">
+                        <span>Friday</span>
+                    </label>
+                </div>
+
+                </div><!-- .choose-box -->
             </div>
         </div>
     </td>

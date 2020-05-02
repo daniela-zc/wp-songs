@@ -30,30 +30,21 @@
 		wp_body_open();
 		?>
 
-		<header id="site-header" class="header-footer-group" role="banner">
+		<header id="minimal-site-header"  role="banner">
 
-			<div class="header-inner section-inner">
+			<div class="row center-xs">
+					<div class="col-xs-8">
+						<div class="minimal-header-inner ">
+							<?php
+								// Site logo.
+								minimalsongs_site_logo();
+							?>
+						</div><!-- .minimal-header-inner -->
+					</div><!-- .col-xs-8 -->
+				
+				
+			</div>
 
-				<div class="header-titles-wrapper">
-
-					<div class="header-titles">
-
-						<?php
-							// Site logo.
-							// twentytwenty_site_logo();
-							minimalsongs_site_logo();
-							// Get Site name.
-							// $description = get_bloginfo( 'name' );
-						?>
-						
-						<div class="minimal-site-description"><?php //echo $description?></div>
-
-					</div><!-- .header-titles -->
-
-				</div><!-- .header-titles-wrapper -->
-
-			</div><!-- .header-inner -->
-
-		</header><!-- #site-header -->
+		</header><!-- #minimal-site-header -->
 
 

@@ -2,12 +2,13 @@
 /**
  * Register and Enqueue Styles.
  */
-function minimal_songs_styles() {
+function minimal_songs_styles_scripts() {
 	wp_enqueue_style('flexboxgrid', get_stylesheet_directory_uri() . '/assets/css/flexboxgrid.min.css');
 	wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+	wp_enqueue_script( 'minimaljs', get_stylesheet_directory_uri() . '/assets/js/minimaljs.js', array('jquery'), null, true );
 }
 
-add_action( 'wp_enqueue_scripts', 'minimal_songs_styles' );
+add_action( 'wp_enqueue_scripts', 'minimal_songs_styles_scripts' );
 
 
 /**
@@ -73,7 +74,11 @@ function minimalsongs_site_logo( $args = array(), $echo = true ) {
 
 }
 
-function minimalsongs_play_png(){
-	echo '<img src="'.get_stylesheet_directory_uri() . '/assets/images/play.png'.'" height="30" width="30">';
 
+function minimalsongs_play_small_png(){
+	echo '<img src="'.get_stylesheet_directory_uri() . '/assets/images/play.png'.'" height="20" width="20">';
+}
+
+function minimalsongs_play_mid_png(){
+	echo '<img src="'.get_stylesheet_directory_uri() . '/assets/images/play.png'.'" height="30" width="30">';
 }
