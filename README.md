@@ -1,5 +1,7 @@
-## Instructions _ clone repository _ create New Database as utf8_general_ci
+## Instructions
 
+- clone repository
+- create New Database as utf8_general_ci
 - Import wpsongsdb.sql.gz in your new Database
 - Configure your WordPress site with the following data:
   - DB_NAME : your DB name
