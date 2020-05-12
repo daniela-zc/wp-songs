@@ -12,4 +12,16 @@
   - wpadmin
   - WS2020\*\*
 
+- .htaccess format
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /[project-name]/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /[project-name]/index.php [L]
+</IfModule>
+
+
 ### Created by Daniela Zeledón
